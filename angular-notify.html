@@ -1,0 +1,41 @@
+<div id="notify" class="gmail-template alert alert-info alert-dismissable">
+
+	<style>
+		.gmail-template {
+			position:fixed;
+			/*left:45%;*/
+			top:-50px;
+			z-index: 9999;
+			max-width:40%;
+			font-weight: bold;
+			font-size: 13px;
+			/*margin: 0 auto;*/
+			position: fixed;
+		    /* center the div */
+		    right: 0;
+		    left: 0;
+		    margin-right: auto;
+		    margin-left: auto;
+		    /* give it dimensions */
+		    max-height: 10%;
+		    width: 40%;
+		
+		    text-align: center;
+		
+			-webkit-transition: top 0.5s ease-in,opacity 0.5s ease-in 1s; /* 4 sec delay for longer message visibility */
+			-moz-transition: top 0.5s ease-out,opacity 0.5s ease-out 1s;
+			-o-transition: top 0.5s ease-out,opacity 0.5s ease-out 1s;
+			transition: top 0.5s ease-out,opacity 0.5s ease-out 1s;
+		}
+
+
+	</style>
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<strong>{{message}}</strong>
+
+</div>
+<script>
+	$('.close').on('click', function() {
+		$('#notify').slideUp(500);
+	});
+</script>
